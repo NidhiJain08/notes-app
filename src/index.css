@@ -11,3 +11,88 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.container{
+  max-width:900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px ;
+  padding-left: 15px;
+  margin-top: 15px;
+  min-height: 100vh;
+}
+.note-list{/*css grid*/
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+}
+.note.new{
+  background-color: #67d7cc;
+  display: grid;
+  grid-gap: 1rem;
+ 
+}
+textarea{/* no dot coz its html element*/
+  border:none;
+  resize:none;
+  background-color: #67d7cc;
+}
+textarea:focus{
+  outline: none;
+}
+.save{
+  background-color: grey;
+   border:none;
+   padding: 10px 15px 10px 10px;
+   border-radius: 15px;
+}
+.save:hover{
+  background-color: rgb(107, 113, 113);
+  cursor: pointer;
+}
+.darkmode{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dark-mode{
+  background-color: black;
+}
+.dark-mode h2{
+  color: white;
+}
+.search{
+  display: flex;
+  background-color: silver;
+  align-items: center;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 1.5em;
+}
+.search input{
+  border:none;
+  background-color: silver;
+}
+.search input:focus{
+  outline: none;
+}
+.delete-icon{
+  cursor:pointer;
+}
+.note{
+  background-color: #fef68f;
+  
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 150px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;/*first child element(any string) gets positioned at start of container...
+  second child(date,delete icon) gets positioned at end of container*/
+}
+.note-footer{/*note-footer for delete icon and date*/
+  display:flex;
+  align-items: center;
+  justify-content: space-between;/*first child element(date) gets positioned at start of container...
+  second child(delete icon) gets positioned at end of container*/
+  
+}
